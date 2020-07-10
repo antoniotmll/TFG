@@ -1,0 +1,12 @@
+Property Label,Datatype,Property Description
+nombre en el idioma nativo,string,nombre de una persona en su idioma nativo
+país de nacionalidad,string,estado soberano del cual la persona es ciudadana
+imagen,url,imagen ilustrativa del elemento
+lugar de nacimiento,string,sitio más específico conocido donde nació una persona, animal o personaje ficticio
+fecha de nacimiento,time,fecha en la cual nació el sujeto
+fecha de fallecimiento,time,fecha en la cual falleció el sujeto
+género,string,género de una obra creativa o campo de trabajo de un artista
+movimiento,string,movimiento artístico, literario o filosófico asociado con esta persona u obra
+obra destacada,string,obra científica o de arte destacada del sujeto
+premio recibido,string,premio o reconocimiento recibido por una persona, organización u obra creativa
+identificador BVMC de autor,string,identificador de un autor en la Biblioteca Virtual Miguel de Cervantes

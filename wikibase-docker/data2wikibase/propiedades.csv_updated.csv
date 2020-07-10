@@ -1,0 +1,4 @@
+Property Label,Datatype,Property Description,PID
+nombre en el idioma nativo,string,nombre de una persona en su idioma nativo,P1
+país de nacionalidad,string,estado soberano del cual la persona es ciudadana,P2
+imagen,url,imagen ilustrativa del elemento,P3
