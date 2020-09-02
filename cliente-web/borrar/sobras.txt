@@ -1,0 +1,82 @@
+'<div class="card-autores card" id="myData" style="width: 18rem;">\
+                    <img class="card-img-top" src="' + data[i].imagen + '" alt="Card image cap">\
+                    <div class="card-body">\
+                    <h5 class="card-title">' + data[i].nombre + '</h5>\
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>\
+                    <a href="#" class="btn btn-primary">Go somewhere</a>\
+                </div>\
+            </div>\
+            '
+
+
+    <!--   <section class="buscador">
+        <div class="container">
+            <form class="buscador form-inline">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Busca entre los autores del repositorio" aria-label="Search">
+            </form>
+        </div>
+    </section>
+
+
+    
+<div class="row">
+    LOOPCODE
+{
+<div class="col-md-4">
+    DATA
+</div>
+    }
+</div>
+
+
+
+
+
+
+
+
+
+              '<div class="col">\
+                        <div class="card card-autores" style="width: 18rem" data-string="' + data[i].nombre + '";>\
+                        <img class="card-img-top" src="' + data[i].imagen + '" alt="Card image cap">\
+                        <div class="card-body">\
+                            <h5 class="card-title">' + data[i].nombre + '</h5>\
+                            <p class="card-text">' + data[i].pais + '</p>\
+                            <a href="#" class="btn btn-primary">Go somewhere</a>\
+                        </div>\
+                        </div>\
+                        </div>\
+
+
+
+
+
+
+
+
+
+
+
+                     '<div class="col-md-4 card-container">\
+                        <div class="card-flip card-autores" style="width: 18rem" data-string="' + data[i].nombre + '";>\
+                            <div class="card front">\
+                            <img class="card-img-top" src="' + data[i].imagen + '" alt="Card image cap">\
+                                <div class="card-body">\
+                                    <h5 class="card-title">' + data[i].nombre + '</h5>\
+                                    <p class="card-text">' + data[i].pais + '</p>\
+                                </div>\
+                            </div>\
+                            <div class="card back">\
+                                <div class="card-body">\
+                                    <h4 class="card-title">' + data[i].nombre + '</h4>\
+                                    <p class="card-text"><b>Nacido en:</b> ' + data[i].lugar_nacimiento + ', ' + data[i].pais + '.</p>\
+                                    <span class="utcToLocal"><b>Fecha de nacimiento:</b> ' + data[i].fecha_nacimiento + '</span>\
+                                    <p class="card-text"><b>Fecha de fallecimiento:</b> ' + data[i].fecha_fallecimiento + '</p>\
+                                    <p class="card-text"><b>Géneros de su obra:</b> ' + data[i].genero + '</p>\
+                                    <p class="card-text"><b>Movimiento(s):</b> ' + data[i].movimiento + '</p>\
+                                    <p class="card-text"><b>Premios recibidos:</b> ' + data[i].premios + '</p>\
+                                </div>\
+                        </div>\
+                    </div>\
+                    '

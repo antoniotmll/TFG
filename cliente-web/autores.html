@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="http://www.cervantesvirtual.com/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Autores</title>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--navbar-->
+    <script src="js/nav.js"></script>
+
+    <!--buscador-->
+
+    <section class="buscador">
+        <div class="input-group md-form form-sm form-1 pl-0">
+            <div class="input-group-prepend">
+                <span class="input-group-text purple lighten-3" id="basic-text1"><i class="fas fa-search text-white"
+                  aria-hidden="true"></i></span>
+            </div>
+            <input class="buscador-autores form-control my-0 py-1" type="text" placeholder="Buscar autor" aria-label="Search">
+        </div>
+    </section>
+
+    <!--autores-->
+    <section class="autores">
+        <div class="container mt-4">
+            <div class="grid-autores row" id="datosJson"></div>
+        </div>
+    </section>
+
+
+    <!--footer-->
+    <script src="js/footer.js"></script>
+
+    <!--función para buscar-->
+    <script type="text/javascript">
+        $(".buscador-autores").on("keyup", function() {
+            var input = $(this).val().toUpperCase();
+            $(".card-flip").each(function() {
+                if ($(this).data("string").toUpperCase().indexOf(input) < 0) {
+                    $(this).hide();
+                } else {
+                    $(this).show();
+                }
+            })
+        });
+    </script>
+
+    <script>
+        fetch('items_importacion.json')
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                appendData(data);
+            })
+            .catch(function(err) {
+                console.log('error: ' + err);
+            });
+
+        function appendData(data) {
+            var mainContainer = document.getElementById("datosJson");
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+
+                div.innerHTML =
+                    '<div class="col-md-4 card-container">\
+                        <div class="card-flip card-autores" style="width: 18rem" data-string="' + data[i].nombre + '";>\
+                            <div class="card front">\
+                            <img class="card-img-top" src="' + data[i].imagen + '" alt="Card image cap">\
+                                <div class="card-body">\
+                                    <h5 class="card-title">' + data[i].nombre + '</h5>\
+                                    <p class="card-text">' + data[i].pais + '</p>\
+                                </div>\
+                            </div>\
+                            <div class="card back">\
+                                <div class="card-body">\
+                                    <h4 class="card-title">' + data[i].nombre + '</h4>\
+                                    <p class="card-text"><b>Nacido en:</b> ' + data[i].lugar_nacimiento + ', ' + data[i].pais + '.</p>\
+                                    <p class="card-text"><b>Fecha de nacimiento:</b> ' + data[i].fecha_nacimiento + '</p>\
+                                    <p class="card-text"><b>Fecha de fallecimiento:</b> ' + data[i].fecha_fallecimiento + '</p>\
+                                    <p class="card-text" id="hide"><b>Géneros de su obra:</b> ' + data[i].genero + '</p>\
+                                    <p class="card-text"><b>Movimiento(s):</b> ' + data[i].movimiento + '</p>\
+                                    <p class="card-text"><b>Obra(s) destacada(s):</b> ' + data[i].obra_destacada + ' </p>\
+                                    <p class="card-text"><b>Premios recibidos:</b> ' + data[i].premios + '</p>\
+                                </div>\
+                        </div>\
+                    </div>\
+                    '
+                mainContainer.appendChild(div);
+
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1a7c33dba9.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

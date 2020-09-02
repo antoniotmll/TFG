@@ -31,7 +31,7 @@ from datetime import datetime
 use_unique_property = 'P6:string'
 # Change the pwd paramater here 
 bot_user='WikibaseAdmin'
-bot_pwd='bot-tfg@lu98tc8t6nrogckq2h7bneej4tl53ijo'
+bot_pwd='bot-tfg@mn97milmijdpqreul82hl2g5rflc2rmj'
 
 # it uses some methods that need to have the default sparql endpoint changed from the wikidata address
 # but it uses them in the modules with the defaults, so lets over write the method with our own with the our host as the default

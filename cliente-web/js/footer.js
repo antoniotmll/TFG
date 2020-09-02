@@ -15,22 +15,22 @@ document.write('<section>\
             <ul class="list-unstyled">\
               <li>\
                 <p>\
-                  <a href="#!">Inicio</a>\
+                  <a href="index.html">Inicio</a>\
                 </p>\
               </li>\
               <li>\
                 <p>\
-                  <a href="#!">Autores</a>\
+                  <a href="autores.html">Autores</a>\
                 </p>\
               </li>\
               <li>\
                 <p>\
-                  <a href="#!">Géneros</a>\
+                  <a href="generos.html">Géneros</a>\
                 </p>\
               </li>\
               <li>\
                 <p>\
-                  <a href="#!">Movimientos</a>\
+                  <a href="movimientos.html">Movimientos</a>\
                 </p>\
               </li>\
             </ul>\
